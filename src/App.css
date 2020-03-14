@@ -1,38 +1,167 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen");
+* {
+  text-decoration: none !important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::selection {
+  color: #333;
+  background: rgb(32, 236, 100);
+}
+.post-container img {
+  width: 100%;
+  height: auto;
+  margin: 4px;
+}
+.post-container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 80px 2fr 1fr;
+  padding: 6px;
+}
+
+.post {
+  text-align: justify;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 2%;
+  top: 2%;
+}
+
+h1 {
+  font-family: "Playfair Display";
+}
+
+.post-container p {
+  font-family: "Oxygen";
+  font-size: large;
+  color: #333;
+}
+.post-container a {
+  text-decoration: underline !important;
+}
+.post-container ul {
+  list-style-type: circle;
+}
+.post-container li {
+  font-family: "Oxygen";
+  font-size: large;
+  color: #333;
+}
+.post-container h3 {
+  font-family: "Roboto";
+}
+.post-container hr {
+  width: 80%;
+  opacity: 0.7;
+}
+.post-container blockquote p {
+  font-family: "Inter";
+  font-size: x-large;
+  opacity: 0.7;
+}
+
+.wrapper {
+  width: 320px;
+  height: fit-content;
+  margin-top: 50px;
+  background: #fdfeff;
+  transition: background 0.6s ease;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .profile {
+  margin-top: 2.2em;
+  position: relative;
+}
+.wrapper .profile:after {
+  width: 100%;
+  height: 1px;
+  content: " ";
+  display: block;
+  margin-top: 1.3em;
+  background: #e9eff6;
+}
+
+.wrapper .profile .thumbnail {
+  width: 124px;
+  height: 124px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  border-radius: 100%;
+}
+.wrapper .profile .name {
+  color: #2d354a;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: 600;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper .profile .title {
+  color: #333;
+  font-size: 0.75em;
+  text-align: center;
+  margin-top: -20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.wrapper .profile .description {
+  color: #080911;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  font-family: "Baloo Chettan 2", cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper .social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: center;
+  width: 60%;
+  position: relative;
+  left: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .social-icons .icon {
+  color: #333;
+  width: 60px;
+  height: 60px;
+  font-size: x-large;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* For mobile devices */
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .post-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .likes-container {
+    display: flex;
+  }
+  .share {
+    flex-direction: row !important;
+    margin-left: auto;
   }
 }
