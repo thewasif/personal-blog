@@ -16,7 +16,7 @@ function Home(props) {
   }, [blogs]);
   return (
     <Layout>
-      <div style={{ height: "90vh" }}>
+      <div>
         <Title>Welcome to my Blog</Title>
         <SubTitle>I love to share my experiences, here.</SubTitle>
         <BlogContainer>
