@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2882aecb-346f-436b-bf4b-8e1b723ae7e9/deploy-status)](https://app.netlify.com/sites/upbeat-darwin-d9869e/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
