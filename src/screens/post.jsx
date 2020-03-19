@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ReactHtmlParser from "react-html-parser";
 import Layout from "../components/Layout";
 import ProfileCard from "../components/ProfileCard";
+import PageProgress from "react-page-progress";
 
 let tweetHref = `https://twitter.com/intent/tweet?text=Check out this article by @m_wasif_&url=${window.location.href}`;
 let fbHref = `http://www.facebook.com/sharer.php?u=${window.location.href}`;
@@ -22,6 +23,7 @@ function Post(props) {
   }, [slug]);
   return (
     <Layout>
+      <PageProgress color={"#333"} />
       <div className="post-container">
         <div className="likes-container">
           <div
